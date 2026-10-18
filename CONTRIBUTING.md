@@ -47,6 +47,5 @@ The container's clock is faked with libfaketime, starting on a Tuesday afternoon
 ## Releasing
 
 1. Bump the version in `custom_components/toddle/manifest.json` and `pyproject.toml`, then commit.
-2. `git tag vYYYY.MM.N && git push origin main --tags`
-
-Pushing the tag runs the release workflow, which checks that the tag matches `manifest.json` and creates the GitHub release with generated notes.
+2. `git tag vYYYY.MM.N && git push origin main --tags`. This runs the release workflow, which checks that the tag matches `manifest.json` and creates the GitHub release with generated notes.
+3. Replace the generated notes with hand-written ones: `gh release edit vYYYY.MM.N --notes-file notes.md`. Write them for users, in the style of [Simon Willison's release notes](https://simonwillison.net/2022/Jan/31/release-notes/): a short intro on what changed and why it matters, then a list of changes with bold lead-ins, linking to the README, issues and commits. Mention anything users have to do, such as a minimum Home Assistant version or a breaking change, and add screenshots when the UI changed.

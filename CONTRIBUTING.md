@@ -28,6 +28,16 @@ docker compose up -d
 
 Open http://localhost:8123. The integration is mounted read-only into the container. Restart it after a code change with `docker compose restart`. Debug logging for `custom_components.toddle` is enabled in `config/configuration.yaml`.
 
+### Demo instance
+
+To try the UI or take screenshots without a real account, start the demo profile:
+
+```bash
+docker compose --profile demo up -d demo
+```
+
+Open http://localhost:8124 and add the Toddle integration with any email, password and tenant. The `toddle_demo` component in `demo/` replaces the API client with the data from `tests/fixtures`, moved so that the fixtures' "today" is the current day.
+
 ## Version scheme
 
 [CalVer](https://calver.org/) `YYYY.MM.patch`, kept in sync in `manifest.json` and `pyproject.toml`.

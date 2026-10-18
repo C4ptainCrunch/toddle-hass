@@ -1,0 +1,10 @@
+# Home Assistant config for the demo profile: Toddle with fake data, for screenshots.
+homeassistant:
+  name: Demo
+  unit_system: metric
+  time_zone: Europe/Brussels
+  country: BE
+
+default_config:
+
+toddle_demo:

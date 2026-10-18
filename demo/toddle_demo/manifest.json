@@ -1,0 +1,9 @@
+{
+  "domain": "toddle_demo",
+  "name": "Toddle demo data",
+  "codeowners": [],
+  "documentation": "https://github.com/C4ptainCrunch/toddle-hass",
+  "iot_class": "local_polling",
+  "requirements": [],
+  "version": "0.0.0"
+}

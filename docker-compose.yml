@@ -10,3 +10,19 @@ services:
     environment:
       - TZ=Europe/Brussels
     restart: unless-stopped
+
+  # Fake data from tests/fixtures, moved to the current week: docker compose --profile demo up -d demo
+  demo:
+    profiles: [demo]
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: toddle-hass-demo
+    ports:
+      - "127.0.0.1:8124:8123"
+    volumes:
+      - ./demo/config:/config
+      - ./demo/configuration.yaml:/config/configuration.yaml:ro
+      - ./custom_components/toddle:/config/custom_components/toddle:ro
+      - ./demo/toddle_demo:/config/custom_components/toddle_demo:ro
+      - ./tests/fixtures:/fixtures:ro
+    environment:
+      - TZ=Europe/Brussels

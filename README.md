@@ -15,6 +15,10 @@ A Home Assistant integration for [**Toddle**](https://www.toddle.be/), the child
 
 It shows whether your child is at daycare, when they were dropped off and picked up, and what the staff wrote in the journal: meals, naps and messages. You can use these to build dashboards and notifications.
 
+![A child's device page with presence, check-in and check-out times, meals, naps and journal entries](https://raw.githubusercontent.com/C4ptainCrunch/toddle-hass/main/docs/images/device.webp)
+
+![Attendance and journal calendars in week view](https://raw.githubusercontent.com/C4ptainCrunch/toddle-hass/main/docs/images/calendar.webp)
+
 ## Requirements
 
 - Home Assistant 2026.10 or newer.

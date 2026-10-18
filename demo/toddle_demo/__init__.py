@@ -2,6 +2,8 @@
 
 Used by the ``demo`` docker compose profile to take screenshots without real data.
 Any email, password and tenant are accepted when adding the Toddle integration.
+Check-ins, check-outs and journal entries later than now are hidden, like the
+real API would, so the demo follows the (possibly faked) clock through the day.
 """
 
 from __future__ import annotations
@@ -21,6 +23,7 @@ from custom_components.toddle.api import (
     Parent,
     SubscriptionDay,
     ToddleClient,
+    date_from_epoch,
 )
 from custom_components.toddle.const import DOMAIN as TODDLE_DOMAIN
 
@@ -31,6 +34,13 @@ FIXTURE_TODAY = date(2026, 3, 31)
 
 
 _DATA: dict[str, Any] = {}
+# Fixture messages that don't fit any time of year, replaced in the demo.
+_MESSAGES = {
+    "b0000000-0000-4000-8000-000000000002": (
+        "Beste ouders\n\nMorgen gaan we naar de kinderboerderij. "
+        "Graag laarzen meegeven!\n\nTeam voorbeeldgroep :)"
+    ),
+}
 
 
 def _read_fixtures() -> dict[str, Any]:
@@ -47,6 +57,22 @@ def _shift(items: list[dict[str, Any]], keys: tuple[str, ...]) -> list[dict[str,
         item | {key: item[key] + seconds for key in keys if key in item}
         for item in items
     ]
+
+
+def _hide_future(day: dict[str, Any]) -> dict[str, Any]:
+    now = datetime.now(DAYCARE_TZ)
+    if date_from_epoch(day["date"]) != now.date():
+        return day
+    clock = now.strftime("%H:%M")
+    presences = [
+        {"in": "", "out": ""}
+        if slot.get("in", "") > clock
+        else slot | {"out": ""}
+        if slot.get("out", "") > clock
+        else slot
+        for slot in day.get("presences", [])
+    ]
+    return day | {"presences": presences}
 
 
 async def _login(self: ToddleClient) -> None:
@@ -66,7 +92,9 @@ async def _get_subscription_days(
 ) -> list[SubscriptionDay]:
     items = _shift(_load("subscription_days.json")["data"], ("date",))
     days = (
-        SubscriptionDay.from_dict(i) for i in items if i["child"]["uuid"] == child_uuid
+        SubscriptionDay.from_dict(_hide_future(i))
+        for i in items
+        if i["child"]["uuid"] == child_uuid
     )
     return [d for d in days if start <= d.date <= end]
 
@@ -75,13 +103,18 @@ async def _get_journals(
     self: ToddleClient, child_uuid: str, start: date, end: date
 ) -> list[JournalEntry]:
     items = _shift(_load("journals.json")["data"], ("happened_at", "created_at"))
-    entries = (JournalEntry.from_dict(i) for i in items)
+    entries = (
+        JournalEntry.from_dict(i | {"message": _MESSAGES.get(i["uuid"], i["message"])})
+        for i in items
+    )
     # Journal fixtures all belong to the first child.
     first = _load("children.json")["data"][0]["uuid"]
     return [
         e
         for e in entries
-        if child_uuid == first and start <= e.happened_at.date() <= end
+        if child_uuid == first
+        and start <= e.happened_at.date() <= end
+        and e.happened_at <= datetime.now(DAYCARE_TZ)
     ]
 
 

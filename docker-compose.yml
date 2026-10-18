@@ -14,7 +14,7 @@ services:
   # Fake data from tests/fixtures, moved to the current week: docker compose --profile demo up -d demo
   demo:
     profiles: [demo]
-    image: ghcr.io/home-assistant/home-assistant:stable
+    build: demo
     container_name: toddle-hass-demo
     ports:
       - "127.0.0.1:8124:8123"
@@ -26,3 +26,7 @@ services:
       - ./tests/fixtures:/fixtures:ro
     environment:
       - TZ=Europe/Brussels
+      # A Tuesday afternoon while the child is at daycare; the clock keeps ticking from there.
+      - FAKETIME=@${DEMO_TIME:-2026-10-20 14:00:00}
+      - FAKETIME_DONT_FAKE_MONOTONIC=1
+      - LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1

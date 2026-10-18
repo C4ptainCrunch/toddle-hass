@@ -36,7 +36,9 @@ To try the UI or take screenshots without a real account, start the demo profile
 docker compose --profile demo up -d demo
 ```
 
-Open http://localhost:8124 and add the Toddle integration with any email, password and tenant. The `toddle_demo` component in `demo/` replaces the API client with the data from `tests/fixtures`, moved so that the fixtures' "today" is the current day.
+Open http://localhost:8124 and add the Toddle integration with any email, password and tenant. The `toddle_demo` component in `demo/` replaces the API client with the data from `tests/fixtures`, moved so that the fixtures' "today" is the current day. Check-ins and journal entries later than the current time are hidden.
+
+The container's clock is faked with libfaketime, starting on a Tuesday afternoon while the child is at daycare. Pick another moment with `DEMO_TIME="2026-10-20 17:00:00" docker compose --profile demo up -d demo`. Your browser still uses the real time, so relative times ("5 hours ago") will be off unless you fake its clock too, as the screenshot script does with Playwright's `page.clock`.
 
 ## Version scheme
 

@@ -1,0 +1,107 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "at_daycare": {
+        "default": "mdi:home-account",
+        "state": {
+          "off": "mdi:home-outline",
+          "on": "mdi:human-child"
+        }
+      }
+    },
+    "calendar": {
+      "attendance": {
+        "default": "mdi:calendar-account"
+      },
+      "journal": {
+        "default": "mdi:notebook-heart"
+      }
+    },
+    "event": {
+      "journal": {
+        "default": "mdi:notebook-heart",
+        "state_attributes": {
+          "event_type": {
+            "default": "mdi:notebook-heart",
+            "state": {
+              "general": "mdi:message-text",
+              "nutrition": "mdi:silverware-fork-knife",
+              "sleep": "mdi:sleep",
+              "bowel_movement": "mdi:toilet",
+              "activity": "mdi:palette",
+              "health": "mdi:medical-bag",
+              "other": "mdi:notebook"
+            }
+          }
+        }
+      }
+    },
+    "image": {
+      "qr_code": {
+        "default": "mdi:qrcode"
+      }
+    },
+    "sensor": {
+      "status": {
+        "default": "mdi:human-child",
+        "state": {
+          "expected": "mdi:clock-outline",
+          "present": "mdi:human-child",
+          "picked_up": "mdi:home-heart",
+          "absent": "mdi:account-cancel",
+          "no_daycare": "mdi:calendar-blank"
+        }
+      },
+      "check_in": {
+        "default": "mdi:login"
+      },
+      "check_out": {
+        "default": "mdi:logout"
+      },
+      "scheduled_drop_off": {
+        "default": "mdi:clock-start"
+      },
+      "scheduled_pick_up": {
+        "default": "mdi:clock-end"
+      },
+      "time_at_daycare": {
+        "default": "mdi:timer-sand"
+      },
+      "next_daycare_day": {
+        "default": "mdi:calendar-arrow-right"
+      },
+      "latest_journal_entry": {
+        "default": "mdi:notebook-heart"
+      },
+      "last_meal": {
+        "default": "mdi:silverware-fork-knife"
+      },
+      "last_nap": {
+        "default": "mdi:sleep"
+      },
+      "journal_entries_today": {
+        "default": "mdi:notebook-multiple"
+      },
+      "remark": {
+        "default": "mdi:note-text"
+      },
+      "group": {
+        "default": "mdi:account-group"
+      },
+      "daycare": {
+        "default": "mdi:home-city"
+      },
+      "birth_date": {
+        "default": "mdi:cake-variant"
+      }
+    }
+  },
+  "services": {
+    "get_journal": {
+      "service": "mdi:notebook-heart"
+    },
+    "get_attendance": {
+      "service": "mdi:calendar-account"
+    }
+  }
+}

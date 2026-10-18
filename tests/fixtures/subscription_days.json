@@ -1,0 +1,301 @@
+{
+ "page": 1,
+ "limit": 500,
+ "data": [
+  {
+   "uuid": "a0000000-0000-4000-8000-000000000331",
+   "date": 1774915200,
+   "state": "OUT",
+   "type_of_subscription": "REGULAR",
+   "type_of_childcare": "REGULAR",
+   "type_of_day": "WEEKDAY",
+   "department": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000d001",
+    "display_name": "Voorbeeldgroep"
+   },
+   "daycare": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000c001",
+    "display_name": "Voorbeeldcreche"
+   },
+   "child": {
+    "uuid": "e1000000-0000-4000-8000-000000000001",
+    "display_name": "Emma Louise Janssens"
+   },
+   "subscription": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000s001",
+    "type": "REGULAR"
+   },
+   "schedules": [
+    {
+     "in": "07:00",
+     "out": "18:00"
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "presences": [
+    {
+     "in": "08:45",
+     "out": "15:35"
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "points_of_attention": [],
+   "remark": "",
+   "flex_available": false,
+   "absence": "",
+   "exception": "",
+   "temporary_outside": false,
+   "presence_product": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000p001",
+    "display_name": "Hele dag"
+   }
+  },
+  {
+   "uuid": "a0000000-0000-4000-8000-000000000401",
+   "date": 1775001600,
+   "state": "EXPECTED",
+   "type_of_subscription": "REGULAR",
+   "type_of_childcare": "REGULAR",
+   "type_of_day": "WEEKDAY",
+   "department": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000d001",
+    "display_name": "Voorbeeldgroep"
+   },
+   "daycare": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000c001",
+    "display_name": "Voorbeeldcreche"
+   },
+   "child": {
+    "uuid": "e1000000-0000-4000-8000-000000000001",
+    "display_name": "Emma Louise Janssens"
+   },
+   "subscription": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000s001",
+    "type": "REGULAR"
+   },
+   "schedules": [
+    {
+     "in": "07:00",
+     "out": "18:00"
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "presences": [
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "points_of_attention": [],
+   "remark": "",
+   "flex_available": false,
+   "absence": "",
+   "exception": "",
+   "temporary_outside": false
+  },
+  {
+   "uuid": "a0000000-0000-4000-8000-000000000402",
+   "date": 1775088000,
+   "state": "ABSENT",
+   "type_of_subscription": "REGULAR",
+   "type_of_childcare": "REGULAR",
+   "type_of_day": "WEEKDAY",
+   "department": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000d001",
+    "display_name": "Voorbeeldgroep"
+   },
+   "daycare": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000c001",
+    "display_name": "Voorbeeldcreche"
+   },
+   "child": {
+    "uuid": "e1000000-0000-4000-8000-000000000001",
+    "display_name": "Emma Louise Janssens"
+   },
+   "subscription": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000s001",
+    "type": "REGULAR"
+   },
+   "schedules": [
+    {
+     "in": "07:00",
+     "out": "18:00"
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "presences": [
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "points_of_attention": [],
+   "remark": "",
+   "flex_available": false,
+   "absence": "Vakantie",
+   "exception": "",
+   "temporary_outside": false
+  },
+  {
+   "uuid": "a0000000-0000-4000-8000-000000000403",
+   "date": 1775174400,
+   "state": "EXPECTED",
+   "type_of_subscription": "REGULAR",
+   "type_of_childcare": "REGULAR",
+   "type_of_day": "WEEKDAY",
+   "department": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000d001",
+    "display_name": "Voorbeeldgroep"
+   },
+   "daycare": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000c001",
+    "display_name": "Voorbeeldcreche"
+   },
+   "child": {
+    "uuid": "e1000000-0000-4000-8000-000000000001",
+    "display_name": "Emma Louise Janssens"
+   },
+   "subscription": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000s001",
+    "type": "REGULAR"
+   },
+   "schedules": [
+    {
+     "in": "07:00",
+     "out": "18:00"
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "presences": [
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "points_of_attention": [],
+   "remark": "",
+   "flex_available": false,
+   "absence": "",
+   "exception": "",
+   "temporary_outside": false
+  },
+  {
+   "uuid": "a0000000-0000-4000-8000-000000000404",
+   "date": 1775260800,
+   "state": "UNPLANNED",
+   "type_of_subscription": "REGULAR",
+   "type_of_childcare": "REGULAR",
+   "type_of_day": "WEEKEND",
+   "department": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000d001",
+    "display_name": "Voorbeeldgroep"
+   },
+   "daycare": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000c001",
+    "display_name": "Voorbeeldcreche"
+   },
+   "child": {
+    "uuid": "e1000000-0000-4000-8000-000000000001",
+    "display_name": "Emma Louise Janssens"
+   },
+   "subscription": {
+    "uuid": "2f1c0b1e-0000-4000-8000-00000000s001",
+    "type": "REGULAR"
+   },
+   "schedules": [
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "presences": [
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    },
+    {
+     "in": "",
+     "out": ""
+    }
+   ],
+   "points_of_attention": [],
+   "remark": "",
+   "flex_available": false,
+   "absence": "",
+   "exception": "",
+   "temporary_outside": false
+  }
+ ],
+ "total": 5
+}

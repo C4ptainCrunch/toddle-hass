@@ -1,0 +1,213 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Se connecter à Toddle",
+        "description": "Connectez-vous avec l'adresse e-mail et le mot de passe que vous utilisez dans l'application Toddle for Parents.",
+        "data": {
+          "email": "E-mail",
+          "password": "Mot de passe",
+          "tenant": "Organisation"
+        },
+        "data_description": {
+          "email": "L'adresse e-mail de votre compte parent Toddle.",
+          "password": "Le mot de passe de votre compte parent Toddle.",
+          "tenant": "L'organisation qui gère votre crèche sur kinderopvang.software. Laissez `brussel` pour les crèches de la Ville de Bruxelles."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Réauthentifier l'intégration",
+        "description": "Le mot de passe de {email} n'est plus accepté. Saisissez le mot de passe actuel.",
+        "data": {
+          "password": "Mot de passe"
+        },
+        "data_description": {
+          "password": "Le mot de passe de votre compte parent Toddle."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigurer Toddle",
+        "description": "Modifiez les identifiants ou l'organisation utilisés pour ce compte.",
+        "data": {
+          "email": "E-mail",
+          "password": "Mot de passe",
+          "tenant": "Organisation"
+        },
+        "data_description": {
+          "email": "L'adresse e-mail de votre compte parent Toddle.",
+          "password": "Le mot de passe de votre compte parent Toddle.",
+          "tenant": "L'organisation qui gère votre crèche sur kinderopvang.software."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Échec de la connexion",
+      "invalid_auth": "Authentification non valide",
+      "unknown": "Erreur inattendue",
+      "invalid_tenant": "Cette organisation n'existe pas. Vérifiez l'orthographe ou laissez `brussel`."
+    },
+    "abort": {
+      "already_configured": "Le compte est déjà configuré",
+      "reauth_successful": "La réauthentification a réussi",
+      "reconfigure_successful": "La reconfiguration a réussi",
+      "wrong_account": "Ces identifiants appartiennent à un autre compte Toddle. Ajoutez-le plutôt comme nouvelle intégration."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "at_daycare": {
+        "name": "À la crèche"
+      }
+    },
+    "calendar": {
+      "attendance": {
+        "name": "Présences"
+      },
+      "journal": {
+        "name": "Journal"
+      }
+    },
+    "event": {
+      "journal": {
+        "name": "Journal",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "general": "Message",
+              "nutrition": "Repas",
+              "sleep": "Sieste",
+              "bowel_movement": "Change",
+              "activity": "Activité",
+              "health": "Santé",
+              "other": "Autre"
+            }
+          }
+        }
+      }
+    },
+    "image": {
+      "qr_code": {
+        "name": "Code QR"
+      }
+    },
+    "sensor": {
+      "status": {
+        "name": "Statut",
+        "state": {
+          "expected": "Attendu",
+          "present": "À la crèche",
+          "picked_up": "Récupéré",
+          "absent": "Absent",
+          "no_daycare": "Pas de crèche"
+        }
+      },
+      "check_in": {
+        "name": "Arrivée"
+      },
+      "check_out": {
+        "name": "Départ"
+      },
+      "scheduled_drop_off": {
+        "name": "Arrivée prévue"
+      },
+      "scheduled_pick_up": {
+        "name": "Départ prévu"
+      },
+      "time_at_daycare": {
+        "name": "Temps à la crèche"
+      },
+      "next_daycare_day": {
+        "name": "Prochain jour de crèche"
+      },
+      "latest_journal_entry": {
+        "name": "Dernière entrée du journal"
+      },
+      "last_meal": {
+        "name": "Dernier repas"
+      },
+      "last_nap": {
+        "name": "Dernière sieste"
+      },
+      "journal_entries_today": {
+        "name": "Entrées du journal aujourd'hui",
+        "unit_of_measurement": "entrées"
+      },
+      "remark": {
+        "name": "Remarque"
+      },
+      "group": {
+        "name": "Section"
+      },
+      "daycare": {
+        "name": "Crèche"
+      },
+      "birth_date": {
+        "name": "Date de naissance"
+      }
+    }
+  },
+  "exceptions": {
+    "auth_failed": {
+      "message": "Toddle a refusé les identifiants enregistrés. Veuillez vous réauthentifier."
+    },
+    "update_failed": {
+      "message": "Erreur de communication avec Toddle : {error}"
+    },
+    "calendar_fetch_failed": {
+      "message": "Impossible de charger les présences depuis Toddle : {error}"
+    },
+    "service_failed": {
+      "message": "La requête Toddle a échoué : {error}"
+    },
+    "invalid_child": {
+      "message": "L'appareil {device_id} n'est pas un enfant d'un compte Toddle."
+    },
+    "entry_not_loaded": {
+      "message": "Le compte Toddle {entry} n'est pas chargé."
+    },
+    "invalid_date_range": {
+      "message": "La date de fin ne peut pas précéder la date de début."
+    },
+    "date_range_too_long": {
+      "message": "La période ne peut pas dépasser {days} jours."
+    }
+  },
+  "services": {
+    "get_journal": {
+      "name": "Obtenir le journal",
+      "description": "Récupère les entrées du journal (messages, repas, siestes, ...) écrites par le personnel de la crèche au sujet d'un enfant.",
+      "fields": {
+        "child": {
+          "name": "Enfant",
+          "description": "L'enfant dont il faut récupérer le journal."
+        },
+        "start_date": {
+          "name": "Date de début",
+          "description": "Premier jour inclus. Par défaut aujourd'hui."
+        },
+        "end_date": {
+          "name": "Date de fin",
+          "description": "Dernier jour inclus. Par défaut la date de début."
+        }
+      }
+    },
+    "get_attendance": {
+      "name": "Obtenir les présences",
+      "description": "Récupère les présences prévues et réelles d'un enfant.",
+      "fields": {
+        "child": {
+          "name": "Enfant",
+          "description": "L'enfant dont il faut récupérer les présences."
+        },
+        "start_date": {
+          "name": "Date de début",
+          "description": "Premier jour inclus. Par défaut aujourd'hui."
+        },
+        "end_date": {
+          "name": "Date de fin",
+          "description": "Dernier jour inclus. Par défaut la date de début."
+        }
+      }
+    }
+  }
+}

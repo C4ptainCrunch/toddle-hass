@@ -1,0 +1,213 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Verbinden met Toddle",
+        "description": "Meld je aan met het e-mailadres en wachtwoord dat je gebruikt in de Toddle for Parents-app.",
+        "data": {
+          "email": "E-mail",
+          "password": "Wachtwoord",
+          "tenant": "Organisatie"
+        },
+        "data_description": {
+          "email": "Het e-mailadres van je Toddle-ouderaccount.",
+          "password": "Het wachtwoord van je Toddle-ouderaccount.",
+          "tenant": "De organisatie die je kinderopvang beheert op kinderopvang.software. Laat dit op `brussel` staan voor kinderdagverblijven van de Stad Brussel."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Integratie opnieuw verifiëren",
+        "description": "Het wachtwoord voor {email} wordt niet meer aanvaard. Geef het huidige wachtwoord in.",
+        "data": {
+          "password": "Wachtwoord"
+        },
+        "data_description": {
+          "password": "Het wachtwoord van je Toddle-ouderaccount."
+        }
+      },
+      "reconfigure": {
+        "title": "Toddle opnieuw configureren",
+        "description": "Wijzig de inloggegevens of organisatie voor dit account.",
+        "data": {
+          "email": "E-mail",
+          "password": "Wachtwoord",
+          "tenant": "Organisatie"
+        },
+        "data_description": {
+          "email": "Het e-mailadres van je Toddle-ouderaccount.",
+          "password": "Het wachtwoord van je Toddle-ouderaccount.",
+          "tenant": "De organisatie die je kinderopvang beheert op kinderopvang.software."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kan geen verbinding maken",
+      "invalid_auth": "Ongeldige authenticatie",
+      "unknown": "Onverwachte fout",
+      "invalid_tenant": "Deze organisatie bestaat niet. Controleer de spelling of laat dit op `brussel` staan."
+    },
+    "abort": {
+      "already_configured": "Account is al geconfigureerd",
+      "reauth_successful": "Herauthenticatie geslaagd",
+      "reconfigure_successful": "Herconfiguratie geslaagd",
+      "wrong_account": "Deze inloggegevens horen bij een ander Toddle-account. Voeg het toe als een nieuwe integratie."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "at_daycare": {
+        "name": "In de opvang"
+      }
+    },
+    "calendar": {
+      "attendance": {
+        "name": "Aanwezigheid"
+      },
+      "journal": {
+        "name": "Dagboek"
+      }
+    },
+    "event": {
+      "journal": {
+        "name": "Dagboek",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "general": "Bericht",
+              "nutrition": "Maaltijd",
+              "sleep": "Dutje",
+              "bowel_movement": "Luier",
+              "activity": "Activiteit",
+              "health": "Gezondheid",
+              "other": "Andere"
+            }
+          }
+        }
+      }
+    },
+    "image": {
+      "qr_code": {
+        "name": "QR-code"
+      }
+    },
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "expected": "Verwacht",
+          "present": "In de opvang",
+          "picked_up": "Opgehaald",
+          "absent": "Afwezig",
+          "no_daycare": "Geen opvang"
+        }
+      },
+      "check_in": {
+        "name": "Aankomst"
+      },
+      "check_out": {
+        "name": "Vertrek"
+      },
+      "scheduled_drop_off": {
+        "name": "Geplande aankomst"
+      },
+      "scheduled_pick_up": {
+        "name": "Gepland ophalen"
+      },
+      "time_at_daycare": {
+        "name": "Tijd in de opvang"
+      },
+      "next_daycare_day": {
+        "name": "Volgende opvangdag"
+      },
+      "latest_journal_entry": {
+        "name": "Laatste dagboekbericht"
+      },
+      "last_meal": {
+        "name": "Laatste maaltijd"
+      },
+      "last_nap": {
+        "name": "Laatste dutje"
+      },
+      "journal_entries_today": {
+        "name": "Dagboekberichten vandaag",
+        "unit_of_measurement": "berichten"
+      },
+      "remark": {
+        "name": "Opmerking"
+      },
+      "group": {
+        "name": "Leefgroep"
+      },
+      "daycare": {
+        "name": "Kinderopvang"
+      },
+      "birth_date": {
+        "name": "Geboortedatum"
+      }
+    }
+  },
+  "exceptions": {
+    "auth_failed": {
+      "message": "Toddle weigert de opgeslagen inloggegevens. Verifieer opnieuw."
+    },
+    "update_failed": {
+      "message": "Fout bij communicatie met Toddle: {error}"
+    },
+    "calendar_fetch_failed": {
+      "message": "Kon aanwezigheid niet laden van Toddle: {error}"
+    },
+    "service_failed": {
+      "message": "Toddle-verzoek mislukt: {error}"
+    },
+    "invalid_child": {
+      "message": "Apparaat {device_id} is geen kind van een Toddle-account."
+    },
+    "entry_not_loaded": {
+      "message": "Het Toddle-account {entry} is niet geladen."
+    },
+    "invalid_date_range": {
+      "message": "De einddatum mag niet voor de startdatum liggen."
+    },
+    "date_range_too_long": {
+      "message": "De periode mag niet langer zijn dan {days} dagen."
+    }
+  },
+  "services": {
+    "get_journal": {
+      "name": "Dagboek ophalen",
+      "description": "Haalt dagboekberichten (berichten, maaltijden, dutjes, ...) op die de begeleiding over een kind schreef.",
+      "fields": {
+        "child": {
+          "name": "Kind",
+          "description": "Het kind waarvoor dagboekberichten worden opgehaald."
+        },
+        "start_date": {
+          "name": "Startdatum",
+          "description": "Eerste dag. Standaard vandaag."
+        },
+        "end_date": {
+          "name": "Einddatum",
+          "description": "Laatste dag. Standaard de startdatum."
+        }
+      }
+    },
+    "get_attendance": {
+      "name": "Aanwezigheid ophalen",
+      "description": "Haalt de geplande en werkelijke aanwezigheid van een kind op.",
+      "fields": {
+        "child": {
+          "name": "Kind",
+          "description": "Het kind waarvoor de aanwezigheid wordt opgehaald."
+        },
+        "start_date": {
+          "name": "Startdatum",
+          "description": "Eerste dag. Standaard vandaag."
+        },
+        "end_date": {
+          "name": "Einddatum",
+          "description": "Laatste dag. Standaard de startdatum."
+        }
+      }
+    }
+  }
+}

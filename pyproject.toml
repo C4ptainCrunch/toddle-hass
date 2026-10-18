@@ -1,0 +1,52 @@
+[project]
+name = "toddle-hass"
+version = "2026.10.1"
+description = "Home Assistant integration for Toddle (kinderopvang.software)"
+requires-python = ">=3.13.2"
+
+[dependency-groups]
+dev = [
+    "pytest-homeassistant-custom-component",
+    "mypy",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+addopts = "--cov=custom_components.toddle --cov-report=term-missing"
+
+[tool.coverage.report]
+fail_under = 95
+exclude_also = ["if TYPE_CHECKING:", "raise NotImplementedError"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
+files = ["custom_components/toddle"]
+plugins = []
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "D", "PL", "PT", "ASYNC", "C4", "PIE", "RET", "TRY"]
+ignore = ["D203", "D213", "PLR2004", "PLR0913", "TRY003", "TRY300", "RUF001", "E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D", "PLR0915", "PLR0917", "S101"]
+"script/**" = ["D"]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+known-first-party = ["custom_components.toddle"]
+combine-as-imports = true
+split-on-trailing-comma = false
+
+[[tool.mypy.overrides]]
+module = ["homeassistant.*"]
+implicit_reexport = true

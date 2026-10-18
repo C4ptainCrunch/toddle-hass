@@ -1,0 +1,12 @@
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: toddle-hass-dev
+    ports:
+      - "127.0.0.1:8123:8123"
+    volumes:
+      - ./config:/config
+      - ./custom_components/toddle:/config/custom_components/toddle:ro
+    environment:
+      - TZ=Europe/Brussels
+    restart: unless-stopped

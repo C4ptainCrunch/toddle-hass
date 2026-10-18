@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+config/*
+!config/configuration.yaml
+.DS_Store

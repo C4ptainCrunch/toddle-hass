@@ -1,0 +1,59 @@
+{
+ "page": 1,
+ "limit": 500,
+ "data": [
+  {
+   "uuid": "b0000000-0000-4000-8000-000000000001",
+   "happened_at": 1774872000,
+   "type": "NUTRITION",
+   "message": "Goed gegeten",
+   "subscription_day": {
+    "uuid": "a0000000-0000-4000-8000-000000000331",
+    "state": "OUT"
+   },
+   "sender": "STAFF_MEMBER",
+   "created_at": 1774872120,
+   "prio": false
+  },
+  {
+   "uuid": "b0000000-0000-4000-8000-000000000002",
+   "happened_at": 1774957680,
+   "type": "GENERAL",
+   "message": "Beste ouders\n\nBedankt voor het leuke paasontbijt!\n\nTeam voorbeeldgroep :)",
+   "subscription_day": {
+    "uuid": "a0000000-0000-4000-8000-000000000331",
+    "state": "OUT"
+   },
+   "sender": "STAFF_MEMBER",
+   "created_at": 1774957800,
+   "prio": false
+  },
+  {
+   "uuid": "b0000000-0000-4000-8000-000000000003",
+   "happened_at": 1774957800,
+   "type": "NUTRITION",
+   "message": "Minder goed gegeten, veel ontbijt gehad ;)",
+   "subscription_day": {
+    "uuid": "a0000000-0000-4000-8000-000000000331",
+    "state": "OUT"
+   },
+   "sender": "STAFF_MEMBER",
+   "created_at": 1774957920,
+   "prio": false
+  },
+  {
+   "uuid": "b0000000-0000-4000-8000-000000000004",
+   "happened_at": 1774964220,
+   "type": "SLEEP",
+   "message": "Wakker na een flink dutje",
+   "subscription_day": {
+    "uuid": "a0000000-0000-4000-8000-000000000331",
+    "state": "OUT"
+   },
+   "sender": "STAFF_MEMBER",
+   "created_at": 1774964340,
+   "prio": false
+  }
+ ],
+ "total": 4
+}

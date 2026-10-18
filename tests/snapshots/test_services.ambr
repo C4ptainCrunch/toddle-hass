@@ -1,0 +1,179 @@
+# serializer version: 1
+# name: test_services[get_attendance-data2]
+  dict({
+    'days': list([
+      dict({
+        'absence': None,
+        'date': '2026-03-31',
+        'daycare': 'Voorbeeldcreche',
+        'group': 'Voorbeeldgroep',
+        'presences': list([
+          dict({
+            'end': '2026-03-31T15:35:00+02:00',
+            'start': '2026-03-31T08:45:00+02:00',
+          }),
+        ]),
+        'remark': None,
+        'scheduled': list([
+          dict({
+            'end': '2026-03-31T18:00:00+02:00',
+            'start': '2026-03-31T07:00:00+02:00',
+          }),
+        ]),
+        'state': 'OUT',
+        'status': 'picked_up',
+      }),
+      dict({
+        'absence': None,
+        'date': '2026-04-01',
+        'daycare': 'Voorbeeldcreche',
+        'group': 'Voorbeeldgroep',
+        'presences': list([
+        ]),
+        'remark': None,
+        'scheduled': list([
+          dict({
+            'end': '2026-04-01T18:00:00+02:00',
+            'start': '2026-04-01T07:00:00+02:00',
+          }),
+        ]),
+        'state': 'EXPECTED',
+        'status': 'expected',
+      }),
+      dict({
+        'absence': 'Vakantie',
+        'date': '2026-04-02',
+        'daycare': 'Voorbeeldcreche',
+        'group': 'Voorbeeldgroep',
+        'presences': list([
+        ]),
+        'remark': None,
+        'scheduled': list([
+          dict({
+            'end': '2026-04-02T18:00:00+02:00',
+            'start': '2026-04-02T07:00:00+02:00',
+          }),
+        ]),
+        'state': 'ABSENT',
+        'status': 'absent',
+      }),
+      dict({
+        'absence': None,
+        'date': '2026-04-03',
+        'daycare': 'Voorbeeldcreche',
+        'group': 'Voorbeeldgroep',
+        'presences': list([
+        ]),
+        'remark': None,
+        'scheduled': list([
+          dict({
+            'end': '2026-04-03T18:00:00+02:00',
+            'start': '2026-04-03T07:00:00+02:00',
+          }),
+        ]),
+        'state': 'EXPECTED',
+        'status': 'expected',
+      }),
+      dict({
+        'absence': None,
+        'date': '2026-04-04',
+        'daycare': 'Voorbeeldcreche',
+        'group': 'Voorbeeldgroep',
+        'presences': list([
+        ]),
+        'remark': None,
+        'scheduled': list([
+        ]),
+        'state': 'UNPLANNED',
+        'status': 'no_daycare',
+      }),
+    ]),
+  })
+# ---
+# name: test_services[get_journal-data0]
+  dict({
+    'entries': list([
+      dict({
+        'created_at': '2026-03-31T11:50:00+02:00',
+        'happened_at': '2026-03-31T11:48:00+02:00',
+        'message': '''
+          Beste ouders
+          
+          Bedankt voor het leuke paasontbijt!
+          
+          Team voorbeeldgroep :)
+        ''',
+        'priority': False,
+        'sender': 'STAFF_MEMBER',
+        'type': 'general',
+        'uuid': 'b0000000-0000-4000-8000-000000000002',
+      }),
+      dict({
+        'created_at': '2026-03-31T11:52:00+02:00',
+        'happened_at': '2026-03-31T11:50:00+02:00',
+        'message': 'Minder goed gegeten, veel ontbijt gehad ;)',
+        'priority': False,
+        'sender': 'STAFF_MEMBER',
+        'type': 'nutrition',
+        'uuid': 'b0000000-0000-4000-8000-000000000003',
+      }),
+      dict({
+        'created_at': '2026-03-31T13:39:00+02:00',
+        'happened_at': '2026-03-31T13:37:00+02:00',
+        'message': 'Wakker na een flink dutje',
+        'priority': False,
+        'sender': 'STAFF_MEMBER',
+        'type': 'sleep',
+        'uuid': 'b0000000-0000-4000-8000-000000000004',
+      }),
+    ]),
+  })
+# ---
+# name: test_services[get_journal-data1]
+  dict({
+    'entries': list([
+      dict({
+        'created_at': '2026-03-30T12:02:00+02:00',
+        'happened_at': '2026-03-30T12:00:00+02:00',
+        'message': 'Goed gegeten',
+        'priority': False,
+        'sender': 'STAFF_MEMBER',
+        'type': 'nutrition',
+        'uuid': 'b0000000-0000-4000-8000-000000000001',
+      }),
+      dict({
+        'created_at': '2026-03-31T11:50:00+02:00',
+        'happened_at': '2026-03-31T11:48:00+02:00',
+        'message': '''
+          Beste ouders
+          
+          Bedankt voor het leuke paasontbijt!
+          
+          Team voorbeeldgroep :)
+        ''',
+        'priority': False,
+        'sender': 'STAFF_MEMBER',
+        'type': 'general',
+        'uuid': 'b0000000-0000-4000-8000-000000000002',
+      }),
+      dict({
+        'created_at': '2026-03-31T11:52:00+02:00',
+        'happened_at': '2026-03-31T11:50:00+02:00',
+        'message': 'Minder goed gegeten, veel ontbijt gehad ;)',
+        'priority': False,
+        'sender': 'STAFF_MEMBER',
+        'type': 'nutrition',
+        'uuid': 'b0000000-0000-4000-8000-000000000003',
+      }),
+      dict({
+        'created_at': '2026-03-31T13:39:00+02:00',
+        'happened_at': '2026-03-31T13:37:00+02:00',
+        'message': 'Wakker na een flink dutje',
+        'priority': False,
+        'sender': 'STAFF_MEMBER',
+        'type': 'sleep',
+        'uuid': 'b0000000-0000-4000-8000-000000000004',
+      }),
+    ]),
+  })
+# ---

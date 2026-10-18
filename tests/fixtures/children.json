@@ -1,0 +1,38 @@
+{
+ "page": 1,
+ "limit": 500,
+ "data": [
+  {
+   "qr": {
+    "uuid": "c0000000-0000-4000-8000-000000000001",
+    "display_name": "c0000000-0000-4000-8000-000000000001.png",
+    "url": "https://kinderopvang-productie-brussel.s3.eu-west-1.amazonaws.com/brussel/images/QR_CHILD/c0000000-0000-4000-8000-000000000001.png"
+   },
+   "day_of_birth": 1718323200,
+   "child_code": "999999999",
+   "age": {
+    "months": 0,
+    "years": 2
+   },
+   "gender": "FEMALE",
+   "uuid": "e1000000-0000-4000-8000-000000000001",
+   "display_name": "Emma Louise Janssens",
+   "dossier": {
+    "uuid": "d0000000-0000-4000-8000-000000000001"
+   }
+  },
+  {
+   "day_of_birth": 1771545600,
+   "age": {
+    "months": 0,
+    "years": 0
+   },
+   "uuid": "e1000000-0000-4000-8000-000000000002",
+   "display_name": "? Janssens",
+   "dossier": {
+    "uuid": "d0000000-0000-4000-8000-000000000002"
+   }
+  }
+ ],
+ "total": 2
+}

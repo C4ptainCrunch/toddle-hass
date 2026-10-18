@@ -1,0 +1,284 @@
+# serializer version: 1
+# name: test_calendars[calendar.emma_attendance-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': None,
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'calendar',
+    'entity_category': None,
+    'entity_id': 'calendar.emma_attendance',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Attendance',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Attendance',
+    'platform': 'toddle',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'attendance',
+    'unique_id': 'e1000000-0000-4000-8000-000000000001_attendance',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_calendars[calendar.emma_attendance-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <CalendarEntityStateAttribute.ALL_DAY: 'all_day'>: False,
+      <CalendarEntityStateAttribute.DESCRIPTION: 'description'>: 'Group: Voorbeeldgroep',
+      <CalendarEntityStateAttribute.END_TIME: 'end_time'>: '2026-04-01 09:00:00',
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Emma Attendance',
+      <CalendarEntityStateAttribute.LOCATION: 'location'>: 'Voorbeeldcreche',
+      <CalendarEntityStateAttribute.MESSAGE: 'message'>: 'Daycare (planned)',
+      <CalendarEntityStateAttribute.START_TIME: 'start_time'>: '2026-03-31 22:00:00',
+    }),
+    'context': <ANY>,
+    'entity_id': 'calendar.emma_attendance',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'off',
+  })
+# ---
+# name: test_calendars[calendar.emma_journal-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': None,
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'calendar',
+    'entity_category': None,
+    'entity_id': 'calendar.emma_journal',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Journal',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Journal',
+    'platform': 'toddle',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'journal',
+    'unique_id': 'e1000000-0000-4000-8000-000000000001_journal_calendar',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_calendars[calendar.emma_journal-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Emma Journal',
+    }),
+    'context': <ANY>,
+    'entity_id': 'calendar.emma_journal',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'off',
+  })
+# ---
+# name: test_calendars[calendar.janssens_attendance-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': None,
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'calendar',
+    'entity_category': None,
+    'entity_id': 'calendar.janssens_attendance',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Attendance',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Attendance',
+    'platform': 'toddle',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'attendance',
+    'unique_id': 'e1000000-0000-4000-8000-000000000002_attendance',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_calendars[calendar.janssens_attendance-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Janssens Attendance',
+    }),
+    'context': <ANY>,
+    'entity_id': 'calendar.janssens_attendance',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'off',
+  })
+# ---
+# name: test_calendars[calendar.janssens_journal-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': None,
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'calendar',
+    'entity_category': None,
+    'entity_id': 'calendar.janssens_journal',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Journal',
+    'options': dict({
+    }),
+    'original_device_class': None,
+    'original_icon': None,
+    'original_name': 'Journal',
+    'platform': 'toddle',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'journal',
+    'unique_id': 'e1000000-0000-4000-8000-000000000002_journal_calendar',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_calendars[calendar.janssens_journal-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Janssens Journal',
+    }),
+    'context': <ANY>,
+    'entity_id': 'calendar.janssens_journal',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'off',
+  })
+# ---
+# name: test_get_events
+  dict({
+    'calendar.emma_attendance': dict({
+      'events': list([
+        dict({
+          'description': 'Group: Voorbeeldgroep',
+          'end': '2026-03-31T15:35:00+02:00',
+          'location': 'Voorbeeldcreche',
+          'start': '2026-03-31T08:45:00+02:00',
+          'summary': 'At daycare',
+        }),
+        dict({
+          'description': 'Group: Voorbeeldgroep',
+          'end': '2026-04-01T18:00:00+02:00',
+          'location': 'Voorbeeldcreche',
+          'start': '2026-04-01T07:00:00+02:00',
+          'summary': 'Daycare (planned)',
+        }),
+        dict({
+          'description': '''
+            Group: Voorbeeldgroep
+            Vakantie
+          ''',
+          'end': '2026-04-03',
+          'location': 'Voorbeeldcreche',
+          'start': '2026-04-02',
+          'summary': 'Absent',
+        }),
+        dict({
+          'description': 'Group: Voorbeeldgroep',
+          'end': '2026-04-03T18:00:00+02:00',
+          'location': 'Voorbeeldcreche',
+          'start': '2026-04-03T07:00:00+02:00',
+          'summary': 'Daycare (planned)',
+        }),
+      ]),
+    }),
+  })
+# ---
+# name: test_journal_events
+  dict({
+    'calendar.emma_journal': dict({
+      'events': list([
+        dict({
+          'description': 'Goed gegeten',
+          'end': '2026-03-30T12:15:00+02:00',
+          'start': '2026-03-30T12:00:00+02:00',
+          'summary': '🍽️ Goed gegeten',
+        }),
+        dict({
+          'description': '''
+            Beste ouders
+            
+            Bedankt voor het leuke paasontbijt!
+            
+            Team voorbeeldgroep :)
+          ''',
+          'end': '2026-03-31T12:03:00+02:00',
+          'start': '2026-03-31T11:48:00+02:00',
+          'summary': '💬 Beste ouders Bedankt voor het leuke paasontbijt! Team voorbeeldgroep :)',
+        }),
+        dict({
+          'description': 'Minder goed gegeten, veel ontbijt gehad ;)',
+          'end': '2026-03-31T12:05:00+02:00',
+          'start': '2026-03-31T11:50:00+02:00',
+          'summary': '🍽️ Minder goed gegeten, veel ontbijt gehad ;)',
+        }),
+        dict({
+          'description': 'Wakker na een flink dutje',
+          'end': '2026-03-31T13:52:00+02:00',
+          'start': '2026-03-31T13:37:00+02:00',
+          'summary': '😴 Wakker na een flink dutje',
+        }),
+      ]),
+    }),
+  })
+# ---

@@ -1,0 +1,14 @@
+{
+  "domain": "toddle",
+  "name": "Toddle",
+  "codeowners": ["@C4ptainCrunch"],
+  "config_flow": true,
+  "documentation": "https://github.com/C4ptainCrunch/toddle-hass",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/C4ptainCrunch/toddle-hass/issues",
+  "loggers": ["custom_components.toddle"],
+  "quality_scale": "platinum",
+  "requirements": [],
+  "version": "2026.10.1"
+}

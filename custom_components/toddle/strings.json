@@ -1,0 +1,213 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Toddle",
+        "description": "Sign in with the email address and password you use in the Toddle for Parents app.",
+        "data": {
+          "email": "[%key:common::config_flow::data::email%]",
+          "password": "[%key:common::config_flow::data::password%]",
+          "tenant": "Tenant"
+        },
+        "data_description": {
+          "email": "The email address of your Toddle parent account.",
+          "password": "The password of your Toddle parent account.",
+          "tenant": "The organisation running your daycare on kinderopvang.software. Leave this at `brussel` for daycares of the City of Brussels."
+        }
+      },
+      "reauth_confirm": {
+        "title": "[%key:common::config_flow::title::reauth%]",
+        "description": "The password for {email} is no longer accepted. Enter the current password.",
+        "data": {
+          "password": "[%key:common::config_flow::data::password%]"
+        },
+        "data_description": {
+          "password": "The password of your Toddle parent account."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Toddle",
+        "description": "Update the credentials or tenant used for this account.",
+        "data": {
+          "email": "[%key:common::config_flow::data::email%]",
+          "password": "[%key:common::config_flow::data::password%]",
+          "tenant": "Tenant"
+        },
+        "data_description": {
+          "email": "The email address of your Toddle parent account.",
+          "password": "The password of your Toddle parent account.",
+          "tenant": "The organisation running your daycare on kinderopvang.software."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]",
+      "invalid_tenant": "This tenant does not exist. Check the spelling, or leave it at `brussel`."
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_account%]",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]",
+      "reconfigure_successful": "[%key:common::config_flow::abort::reconfigure_successful%]",
+      "wrong_account": "These credentials belong to a different Toddle account. Add it as a new integration entry instead."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "at_daycare": {
+        "name": "At daycare"
+      }
+    },
+    "calendar": {
+      "attendance": {
+        "name": "Attendance"
+      },
+      "journal": {
+        "name": "Journal"
+      }
+    },
+    "event": {
+      "journal": {
+        "name": "Journal",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "general": "Message",
+              "nutrition": "Meal",
+              "sleep": "Nap",
+              "bowel_movement": "Diaper",
+              "activity": "Activity",
+              "health": "Health",
+              "other": "Other"
+            }
+          }
+        }
+      }
+    },
+    "image": {
+      "qr_code": {
+        "name": "QR code"
+      }
+    },
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "expected": "Expected",
+          "present": "At daycare",
+          "picked_up": "Picked up",
+          "absent": "Absent",
+          "no_daycare": "No daycare"
+        }
+      },
+      "check_in": {
+        "name": "Check-in"
+      },
+      "check_out": {
+        "name": "Check-out"
+      },
+      "scheduled_drop_off": {
+        "name": "Scheduled drop-off"
+      },
+      "scheduled_pick_up": {
+        "name": "Scheduled pick-up"
+      },
+      "time_at_daycare": {
+        "name": "Time at daycare"
+      },
+      "next_daycare_day": {
+        "name": "Next daycare day"
+      },
+      "latest_journal_entry": {
+        "name": "Latest journal entry"
+      },
+      "last_meal": {
+        "name": "Last meal"
+      },
+      "last_nap": {
+        "name": "Last nap"
+      },
+      "journal_entries_today": {
+        "name": "Journal entries today",
+        "unit_of_measurement": "entries"
+      },
+      "remark": {
+        "name": "Remark"
+      },
+      "group": {
+        "name": "Group"
+      },
+      "daycare": {
+        "name": "Daycare"
+      },
+      "birth_date": {
+        "name": "Date of birth"
+      }
+    }
+  },
+  "exceptions": {
+    "auth_failed": {
+      "message": "Toddle rejected the stored credentials. Please re-authenticate."
+    },
+    "update_failed": {
+      "message": "Error communicating with Toddle: {error}"
+    },
+    "calendar_fetch_failed": {
+      "message": "Could not load attendance from Toddle: {error}"
+    },
+    "service_failed": {
+      "message": "Toddle request failed: {error}"
+    },
+    "invalid_child": {
+      "message": "Device {device_id} is not a child of a Toddle account."
+    },
+    "entry_not_loaded": {
+      "message": "The Toddle account {entry} is not loaded."
+    },
+    "invalid_date_range": {
+      "message": "The end date must not be before the start date."
+    },
+    "date_range_too_long": {
+      "message": "The date range must not span more than {days} days."
+    }
+  },
+  "services": {
+    "get_journal": {
+      "name": "Get journal",
+      "description": "Retrieves journal entries (messages, meals, naps, ...) written by daycare staff about a child.",
+      "fields": {
+        "child": {
+          "name": "Child",
+          "description": "The child to retrieve journal entries for."
+        },
+        "start_date": {
+          "name": "Start date",
+          "description": "First day to include. Defaults to today."
+        },
+        "end_date": {
+          "name": "End date",
+          "description": "Last day to include. Defaults to the start date."
+        }
+      }
+    },
+    "get_attendance": {
+      "name": "Get attendance",
+      "description": "Retrieves planned and actual attendance of a child.",
+      "fields": {
+        "child": {
+          "name": "[%key:component::toddle::services::get_journal::fields::child::name%]",
+          "description": "The child to retrieve attendance for."
+        },
+        "start_date": {
+          "name": "[%key:component::toddle::services::get_journal::fields::start_date::name%]",
+          "description": "[%key:component::toddle::services::get_journal::fields::start_date::description%]"
+        },
+        "end_date": {
+          "name": "[%key:component::toddle::services::get_journal::fields::end_date::name%]",
+          "description": "[%key:component::toddle::services::get_journal::fields::end_date::description%]"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,283 @@
+# serializer version: 1
+# name: test_diagnostics
+  dict({
+    'children': list([
+      dict({
+        'child': dict({
+          'birth_date': '**REDACTED**',
+          'child_code': '**REDACTED**',
+          'display_name': '**REDACTED**',
+          'gender': 'FEMALE',
+          'qr_code_url': '**REDACTED**',
+          'uuid': '**REDACTED**',
+        }),
+        'days': list([
+          dict({
+            'absence': '',
+            'date': dict({
+              '__type': "<class 'datetime.date'>",
+              'isoformat': '2026-03-31',
+            }),
+            'daycare': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'department': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'exception': '',
+            'presence_product': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'presences': list([
+              dict({
+                'end': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '15:35:00',
+                }),
+                'start': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '08:45:00',
+                }),
+              }),
+            ]),
+            'remark': '',
+            'schedules': list([
+              dict({
+                'end': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '18:00:00',
+                }),
+                'start': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '07:00:00',
+                }),
+              }),
+            ]),
+            'state': 'OUT',
+            'temporary_outside': False,
+            'type_of_day': 'WEEKDAY',
+            'uuid': '**REDACTED**',
+          }),
+          dict({
+            'absence': '',
+            'date': dict({
+              '__type': "<class 'datetime.date'>",
+              'isoformat': '2026-04-01',
+            }),
+            'daycare': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'department': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'exception': '',
+            'presence_product': None,
+            'presences': list([
+            ]),
+            'remark': '',
+            'schedules': list([
+              dict({
+                'end': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '18:00:00',
+                }),
+                'start': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '07:00:00',
+                }),
+              }),
+            ]),
+            'state': 'EXPECTED',
+            'temporary_outside': False,
+            'type_of_day': 'WEEKDAY',
+            'uuid': '**REDACTED**',
+          }),
+          dict({
+            'absence': '**REDACTED**',
+            'date': dict({
+              '__type': "<class 'datetime.date'>",
+              'isoformat': '2026-04-02',
+            }),
+            'daycare': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'department': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'exception': '',
+            'presence_product': None,
+            'presences': list([
+            ]),
+            'remark': '',
+            'schedules': list([
+              dict({
+                'end': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '18:00:00',
+                }),
+                'start': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '07:00:00',
+                }),
+              }),
+            ]),
+            'state': 'ABSENT',
+            'temporary_outside': False,
+            'type_of_day': 'WEEKDAY',
+            'uuid': '**REDACTED**',
+          }),
+          dict({
+            'absence': '',
+            'date': dict({
+              '__type': "<class 'datetime.date'>",
+              'isoformat': '2026-04-03',
+            }),
+            'daycare': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'department': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'exception': '',
+            'presence_product': None,
+            'presences': list([
+            ]),
+            'remark': '',
+            'schedules': list([
+              dict({
+                'end': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '18:00:00',
+                }),
+                'start': dict({
+                  '__type': "<class 'datetime.time'>",
+                  'isoformat': '07:00:00',
+                }),
+              }),
+            ]),
+            'state': 'EXPECTED',
+            'temporary_outside': False,
+            'type_of_day': 'WEEKDAY',
+            'uuid': '**REDACTED**',
+          }),
+          dict({
+            'absence': '',
+            'date': dict({
+              '__type': "<class 'datetime.date'>",
+              'isoformat': '2026-04-04',
+            }),
+            'daycare': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'department': dict({
+              'name': '**REDACTED**',
+              'uuid': '**REDACTED**',
+            }),
+            'exception': '',
+            'presence_product': None,
+            'presences': list([
+            ]),
+            'remark': '',
+            'schedules': list([
+            ]),
+            'state': 'UNPLANNED',
+            'temporary_outside': False,
+            'type_of_day': 'WEEKEND',
+            'uuid': '**REDACTED**',
+          }),
+        ]),
+        'journals': list([
+          dict({
+            'happened_at': '2026-03-30T12:00:00+02:00',
+            'message': '**REDACTED**',
+            'priority': False,
+            'sender': 'STAFF_MEMBER',
+            'subscription_day_uuid': '**REDACTED**',
+            'type': 'NUTRITION',
+            'uuid': '**REDACTED**',
+          }),
+          dict({
+            'happened_at': '2026-03-31T11:48:00+02:00',
+            'message': '**REDACTED**',
+            'priority': False,
+            'sender': 'STAFF_MEMBER',
+            'subscription_day_uuid': '**REDACTED**',
+            'type': 'GENERAL',
+            'uuid': '**REDACTED**',
+          }),
+          dict({
+            'happened_at': '2026-03-31T11:50:00+02:00',
+            'message': '**REDACTED**',
+            'priority': False,
+            'sender': 'STAFF_MEMBER',
+            'subscription_day_uuid': '**REDACTED**',
+            'type': 'NUTRITION',
+            'uuid': '**REDACTED**',
+          }),
+          dict({
+            'happened_at': '2026-03-31T13:37:00+02:00',
+            'message': '**REDACTED**',
+            'priority': False,
+            'sender': 'STAFF_MEMBER',
+            'subscription_day_uuid': '**REDACTED**',
+            'type': 'SLEEP',
+            'uuid': '**REDACTED**',
+          }),
+        ]),
+        'status': 'picked_up',
+        'today': '2026-03-31',
+      }),
+      dict({
+        'child': dict({
+          'birth_date': '**REDACTED**',
+          'child_code': None,
+          'display_name': '**REDACTED**',
+          'gender': None,
+          'qr_code_url': None,
+          'uuid': '**REDACTED**',
+        }),
+        'days': list([
+        ]),
+        'journals': list([
+        ]),
+        'status': None,
+        'today': '2026-03-31',
+      }),
+    ]),
+    'entry': dict({
+      'data': dict({
+        'device_id': '**REDACTED**',
+        'email': '**REDACTED**',
+        'password': '**REDACTED**',
+        'tenant': 'brussel',
+      }),
+      'disabled_by': None,
+      'discovery_keys': dict({
+      }),
+      'domain': 'toddle',
+      'minor_version': 1,
+      'options': dict({
+      }),
+      'pref_disable_new_entities': False,
+      'pref_disable_polling': False,
+      'source': 'user',
+      'subentries': list([
+      ]),
+      'title': '**REDACTED**',
+      'unique_id': '**REDACTED**',
+      'version': 1,
+    }),
+    'last_update_success': True,
+    'update_interval': '0:05:00',
+  })
+# ---

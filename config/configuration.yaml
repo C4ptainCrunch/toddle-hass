@@ -1,0 +1,13 @@
+# Home Assistant dev config for the Toddle integration
+homeassistant:
+  name: Dev
+  unit_system: metric
+  time_zone: Europe/Brussels
+  country: BE
+
+default_config:
+
+logger:
+  default: warning
+  logs:
+    custom_components.toddle: debug

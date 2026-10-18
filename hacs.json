@@ -1,5 +1,5 @@
 {
   "name": "Toddle",
-  "render_readme": true,
+  "country": ["BE"],
   "homeassistant": "2026.10.0"
 }

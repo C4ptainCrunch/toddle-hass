@@ -1,4 +1,12 @@
+<img src="custom_components/toddle/brand/icon.png" alt="Toddle" width="96" align="right">
+
 # Toddle for Home Assistant
+
+[![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
+[![Release](https://img.shields.io/github/v/release/C4ptainCrunch/toddle-hass)](https://github.com/C4ptainCrunch/toddle-hass/releases)
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2026.10%2B-18BCF2?logo=homeassistant&logoColor=white)](https://www.home-assistant.io/)
+[![CI](https://github.com/C4ptainCrunch/toddle-hass/actions/workflows/ci.yml/badge.svg)](https://github.com/C4ptainCrunch/toddle-hass/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/C4ptainCrunch/toddle-hass)](LICENSE)
 
 A Home Assistant integration for [**Toddle**](https://www.toddle.be/), the childcare platform.
 
@@ -7,22 +15,32 @@ A Home Assistant integration for [**Toddle**](https://www.toddle.be/), the child
 
 It shows whether your child is at daycare, when they were dropped off and picked up, and what the staff wrote in the journal: meals, naps and messages. You can use these to build dashboards and notifications.
 
-Built to the Home Assistant [Platinum quality scale](https://developers.home-assistant.io/docs/core/integration-quality-scale/): it is fully async, injects Home Assistant's web session, is strictly typed, and has 99% test coverage. See [`quality_scale.yaml`](custom_components/toddle/quality_scale.yaml).
+## Requirements
 
-## About Toddle for Parents
-
-**Toddle for Parents** is the parent app by Tactics for following your child's day at daycare. It provides a daily overview of drop-off and pick-up times, along with a diary of updates from the daycare. This integration brings data from the same Toddle account into Home Assistant.
+- Home Assistant 2026.10 or newer.
+- A *Toddle for Parents* account at a daycare that uses kinderopvang.software (Belgium).
 
 ## Installation
 
 ### HACS (recommended)
 
-1. In HACS, open the menu → **Custom repositories**, add `https://github.com/C4ptainCrunch/toddle-hass` with type **Integration**.
-2. Install **Toddle** and restart Home Assistant.
+[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=C4ptainCrunch&repository=toddle-hass&category=integration)
+
+Or add it by hand:
+
+1. In HACS, open the menu (⋮) in the top right → **Custom repositories**.
+2. Add `https://github.com/C4ptainCrunch/toddle-hass` with type **Integration**.
+3. Search for **Toddle**, open it and select **Download**.
+4. Restart Home Assistant.
+
+HACS will notify you of new [releases](https://github.com/C4ptainCrunch/toddle-hass/releases).
+
 
 ## Configuration
 
-Go to **Settings → Devices & services → Add integration → Toddle**.
+[![Open your Home Assistant instance and start setting up Toddle.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=toddle)
+
+Or go to **Settings → Devices & services → Add integration → Toddle**.
 
 | Parameter | Description |
 |-----------|-------------|
@@ -124,7 +142,7 @@ The integration polls the Toddle cloud API every **5 minutes** on weekdays betwe
 - Journal events are only fired for entries that appear while Home Assistant is running. Entries written while it was offline update the sensors but don't fire events.
 - Check-in and check-out times have minute resolution and depend on staff registering them. A child can show as `expected` even though they have arrived.
 - Journal messages are shown as written by the staff (usually Dutch). They are not translated.
-- Only read access is supported
+- Only read access is supported.
 
 ## Troubleshooting
 
@@ -146,6 +164,3 @@ The integration polls the Toddle cloud API every **5 minutes** on weekdays betwe
 2. Open the menu (⋮) on the entry and select **Delete**.
 3. If installed through HACS, remove the repository in HACS and restart Home Assistant.
 
-## Development
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).

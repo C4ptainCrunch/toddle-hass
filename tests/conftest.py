@@ -13,6 +13,8 @@ from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
 from homeassistant.core import HomeAssistant
 import pytest
 from pytest_homeassistant_custom_component.common import MockConfigEntry
+from pytest_homeassistant_custom_component.syrupy import HomeAssistantSnapshotExtension
+from syrupy.assertion import SnapshotAssertion
 
 from custom_components.toddle.api import (
     Child,
@@ -64,6 +66,16 @@ def fixture_journals() -> list[JournalEntry]:
 @pytest.fixture(autouse=True)
 def auto_enable_custom_integrations(enable_custom_integrations: None) -> None:
     """Enable custom integrations in all tests."""
+
+
+@pytest.fixture
+def snapshot(snapshot: SnapshotAssertion) -> SnapshotAssertion:
+    """Use the Home Assistant snapshot extension.
+
+    Both syrupy and the Home Assistant plugin define this fixture, and which one
+    wins depends on plugin load order (it differs on Linux CI).
+    """
+    return snapshot.use_extension(HomeAssistantSnapshotExtension)
 
 
 @pytest.fixture(autouse=True)

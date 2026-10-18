@@ -56,7 +56,11 @@
   "entity": {
     "binary_sensor": {
       "at_daycare": {
-        "name": "In de opvang"
+        "name": "In de opvang",
+        "state": {
+          "off": "Niet in de opvang",
+          "on": "In de opvang"
+        }
       }
     },
     "calendar": {

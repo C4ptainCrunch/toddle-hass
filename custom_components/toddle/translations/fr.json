@@ -56,7 +56,11 @@
   "entity": {
     "binary_sensor": {
       "at_daycare": {
-        "name": "À la crèche"
+        "name": "À la crèche",
+        "state": {
+          "off": "Pas à la crèche",
+          "on": "À la crèche"
+        }
       }
     },
     "calendar": {

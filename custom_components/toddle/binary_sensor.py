@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from homeassistant.components.binary_sensor import (
-    BinarySensorDeviceClass,
     BinarySensorEntity,
     BinarySensorEntityDescription,
 )
@@ -18,7 +17,6 @@ PARALLEL_UPDATES = 0
 AT_DAYCARE = BinarySensorEntityDescription(
     key="at_daycare",
     translation_key="at_daycare",
-    device_class=BinarySensorDeviceClass.PRESENCE,
 )
 
 

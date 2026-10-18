@@ -48,4 +48,5 @@ The container's clock is faked with libfaketime, starting on a Tuesday afternoon
 
 1. Bump the version in `custom_components/toddle/manifest.json` and `pyproject.toml`, then commit.
 2. `git tag vYYYY.MM.N && git push origin main --tags`
-3. `gh release create vYYYY.MM.N --title "vYYYY.MM.N" --notes "…"`
+
+Pushing the tag runs the release workflow, which checks that the tag matches `manifest.json` and creates the GitHub release with generated notes.
